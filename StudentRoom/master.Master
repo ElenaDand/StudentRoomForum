@@ -1,0 +1,58 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="master.master.cs" Inherits="StudentRoom.master" %>
+
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Page</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="base/jquery-ui.min.css" rel="stylesheet">
+<link href="StudentRoom.css" rel="stylesheet">
+<link href="master.css" rel="stylesheet">
+<script src="jquery-1.12.4.min.js"></script>
+<script src="jquery-ui.min.js"></script>
+<script src="searchindex.js"></script>
+<script src="wb.sitesearch.min.js"></script>
+<script>
+function searchPage()
+{
+   var element = document.getElementById('search');
+   if (element.value.length != 0 || element.value != " ")
+   {
+      window.location.href = '?q='+encodeURIComponent(element.value);
+   }
+   return false;
+}
+</script>
+<script>
+$(document).ready(function()
+{
+   $("#button_login").button();
+   $("#button_register").button();
+});
+</script>
+</head>
+<body>
+<div id="header" style="border-bottom:1px solid #C5C5C5;">
+<div id="header_title">
+<div id="wb_student_room_title" style="display:inline-block;width:187px;z-index:0;">
+<h2 id="student_room_title" style="cursor:pointer;<br><br>"><a href="#" onclick="window.location.href='./index.aspx';return false;">Student Room</a></h2>
+</div>
+</div>
+<div id="header_buttons">
+<form name="search_form" id="search_form" role="search" accept-charset="UTF-8" style="display:inline" onsubmit="return searchPage()">
+<input type="text" id="search" style="display:block;width:183px;height:30px;" name="SiteSearch1" value="" spellcheck="false" placeholder="&#913;&#957;&#945;&#950;&#942;&#964;&#951;&#963;&#951;" role="searchbox"></form>
+<button type="submit" id="button_login" name="" value="Σύνδεση" style="display:block;width:112px;height:28px;z-index:2;">Σύνδεση</button>
+<button type="submit" id="button_register" name="" value="Εγγραφή" style="display:block;width:112px;height:28px;z-index:3;margin-left: 10px;">Εγγραφή</button>
+<input type="button" id="button_search" onclick="searchPage();return false;" name="Search" value="Search" style="display:none;width:96px;height:25px;z-index:4;">
+</div>
+</div>
+<script>
+$("sitesearch1").keypress(function(event) {
+    if (event.which == 13) {
+        event.preventDefault();
+        $("#sitesearch1_form").submit();
+    }
+});
+</script></body>
+</html>

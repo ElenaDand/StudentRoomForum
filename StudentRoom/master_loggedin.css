@@ -1,0 +1,496 @@
+html, body, #container
+{
+   width: 100%;
+   height: 100%;
+}
+body
+{
+   background-color: #F1F2F2;
+   color: #000000;
+   font-family: Arial;
+   font-weight: normal;
+   font-size: 13px;
+   line-height: 1.1875;
+   margin: 0;
+   padding: 0;
+}
+#header
+{
+   display: -webkit-flex;
+   display: flex;
+   position: fixed;
+   left: 0;
+   top: 0;
+   width: 100%;
+   z-index: 7777;
+   height: 52px;
+   padding: 10px 10px 10px 10px;
+   -webkit-flex-direction: row;
+   flex-direction: row;
+   -webkit-flex-wrap: nowrap;
+   flex-wrap: nowrap;
+   -webkit-justify-content: space-between;
+   justify-content: space-between;
+   -webkit-align-items: center;
+   align-items: center;
+   -webkit-align-content: flex-start;
+   align-content: flex-start;
+   margin: 0;
+   background-color: #FFFFFF;
+   background-image: none;
+   border: 1px solid transparent;
+   box-sizing: border-box;
+   font-size: 0px;
+}
+#header_title
+{
+   display: -webkit-flex;
+   display: flex;
+   position: relative;
+   padding: 10px 10px 10px 10px;
+   -webkit-flex-direction: row;
+   flex-direction: row;
+   -webkit-flex-wrap: nowrap;
+   flex-wrap: nowrap;
+   -webkit-justify-content: flex-start;
+   justify-content: flex-start;
+   -webkit-align-items: center;
+   align-items: center;
+   -webkit-align-content: flex-start;
+   align-content: flex-start;
+   margin: 0;
+   -webkit-flex-grow: 0;
+   flex-grow: 0;
+   -webkit-flex-shrink: 0;
+   flex-shrink: 0;
+   -webkit-align-self: auto;
+   align-self: auto;
+   background-color: transparent;
+   background-image: none;
+   border: 0px solid transparent;
+   box-sizing: border-box;
+   font-size: 0px;
+}
+#wb_student_room_title
+{
+   background-color: transparent;
+   background-image: none;
+   border: 0px solid #000000;
+   margin: 0;
+   padding: 0px 0px 0px 9px;
+   text-align: left;
+   -webkit-flex-grow: 0;
+   flex-grow: 0;
+   -webkit-flex-shrink: 0;
+   flex-shrink: 0;
+   -webkit-align-self: auto;
+   align-self: auto;
+}
+#student_room_title
+{
+   color: #426799;
+   font-family: "MS Sans Serif";
+   font-weight: bold;
+   font-size: 27px;
+   margin: 0;
+   text-align: left;
+}
+#student_room_title a
+{
+   color: #426799;
+   text-decoration: none;
+}
+#header_buttons
+{
+   display: -webkit-flex;
+   display: flex;
+   position: relative;
+   height: 50px;
+   padding: 10px 10px 10px 10px;
+   -webkit-flex-direction: row;
+   flex-direction: row;
+   -webkit-flex-wrap: nowrap;
+   flex-wrap: nowrap;
+   -webkit-justify-content: flex-end;
+   justify-content: flex-end;
+   -webkit-align-items: center;
+   align-items: center;
+   -webkit-align-content: flex-start;
+   align-content: flex-start;
+   margin: 0;
+   -webkit-flex-grow: 0;
+   flex-grow: 0;
+   -webkit-flex-shrink: 0;
+   flex-shrink: 0;
+   -webkit-align-self: auto;
+   align-self: auto;
+   background-color: transparent;
+   background-image: none;
+   border: 0px solid transparent;
+   box-sizing: border-box;
+   font-size: 0px;
+}
+#search
+{
+   border: 1px solid #2E6DA4;
+   border-radius: 4px;
+   background-color: #FFFFFF;
+   background-image: none;
+   color :#000000;
+   font-family: Arial;
+   font-weight: normal;
+   font-size: 13px;
+   box-sizing: border-box;
+   line-height: 20px;
+   padding: 4px 4px 4px 4px;
+   margin: 0;
+   -webkit-flex-grow: 0;
+   flex-grow: 0;
+   -webkit-flex-shrink: 0;
+   flex-shrink: 0;
+   -webkit-align-self: auto;
+   align-self: auto;
+   text-align: left;
+}
+#wb_icon_user
+{
+   background-color: transparent;
+   background-image: none;
+   border: 0px solid #245580;
+   text-align: center;
+   margin: 0;
+   padding: 1px 1px 1px 1px;
+   vertical-align: top;
+   -webkit-flex-grow: 0;
+   flex-grow: 0;
+   -webkit-flex-shrink: 0;
+   flex-shrink: 0;
+   -webkit-align-self: auto;
+   align-self: auto;
+}
+#wb_icon_user:hover
+{
+   background-color: transparent;
+   background-image: none;
+   border: 0px solid #245580;
+}
+#icon_user
+{
+   height: 30px;
+   width: 32px;
+}
+.icon_user
+{
+   position: relative;
+   left: 0;
+   top: 0;
+   display: inline-block;
+   font-family: "Material Icons";
+   font-style: normal;
+   font-weight: normal;
+   line-height: 1;
+}
+.icon_user:before
+{
+   content: "\e853";
+}
+#icon_user i
+{
+   color: #667C99;
+   display: inline-block;
+   font-size: 30px;
+   line-height: 30px;
+   vertical-align: middle;
+   width: 29px;
+}
+#wb_icon_user:hover i
+{
+   color: #333E4D;
+}
+#wb_icon_post
+{
+   background-color: transparent;
+   background-image: none;
+   border: 0px solid #245580;
+   text-align: center;
+   margin: 0;
+   padding: 1px 1px 1px 1px;
+   vertical-align: top;
+   -webkit-flex-grow: 0;
+   flex-grow: 0;
+   -webkit-flex-shrink: 0;
+   flex-shrink: 0;
+   -webkit-align-self: auto;
+   align-self: auto;
+}
+#wb_icon_post:hover
+{
+   background-color: transparent;
+   background-image: none;
+   border: 0px solid #245580;
+}
+#icon_post
+{
+   height: 24px;
+   width: 42px;
+}
+.icon_post
+{
+   position: relative;
+   left: 0;
+   top: 0;
+   display: inline-block;
+   font-family: "Material Icons";
+   font-style: normal;
+   font-weight: normal;
+   line-height: 1;
+}
+.icon_post:before
+{
+   content: "\e22b";
+}
+#icon_post i
+{
+   color: #667C99;
+   display: inline-block;
+   font-size: 24px;
+   line-height: 24px;
+   vertical-align: middle;
+   width: 23px;
+}
+#wb_icon_post:hover i
+{
+   color: #333E4D;
+}
+#wb_icon_messages
+{
+   background-color: transparent;
+   background-image: none;
+   border: 0px solid #245580;
+   text-align: center;
+   margin: 0;
+   padding: 1px 1px 1px 1px;
+   vertical-align: top;
+   -webkit-flex-grow: 0;
+   flex-grow: 0;
+   -webkit-flex-shrink: 0;
+   flex-shrink: 0;
+   -webkit-align-self: auto;
+   align-self: auto;
+}
+#wb_icon_messages:hover
+{
+   background-color: transparent;
+   background-image: none;
+   border: 0px solid #245580;
+}
+#icon_messages
+{
+   height: 30px;
+   width: 38px;
+}
+.icon_messages
+{
+   position: relative;
+   left: 0;
+   top: 0;
+   display: inline-block;
+   font-family: "Material Icons";
+   font-style: normal;
+   font-weight: normal;
+   line-height: 1;
+}
+.icon_messages:before
+{
+   content: "\e554";
+}
+#icon_messages i
+{
+   color: #667C99;
+   display: inline-block;
+   font-size: 30px;
+   line-height: 30px;
+   vertical-align: middle;
+   width: 29px;
+}
+#wb_icon_messages:hover i
+{
+   color: #333E4D;
+}
+#wb_icon_notifications
+{
+   background-color: transparent;
+   background-image: none;
+   border: 0px solid #245580;
+   text-align: center;
+   margin: 0;
+   padding: 1px 1px 1px 1px;
+   vertical-align: top;
+   -webkit-flex-grow: 0;
+   flex-grow: 0;
+   -webkit-flex-shrink: 0;
+   flex-shrink: 0;
+   -webkit-align-self: auto;
+   align-self: auto;
+}
+#wb_icon_notifications:hover
+{
+   background-color: transparent;
+   background-image: none;
+   border: 0px solid #245580;
+}
+#icon_notifications
+{
+   height: 30px;
+   width: 39px;
+}
+.icon_notifications
+{
+   position: relative;
+   left: 0;
+   top: 0;
+   display: inline-block;
+   font-family: "Material Icons";
+   font-style: normal;
+   font-weight: normal;
+   line-height: 1;
+}
+.icon_notifications:before
+{
+   content: "\e7f4";
+}
+#icon_notifications i
+{
+   color: #667C99;
+   display: inline-block;
+   font-size: 30px;
+   line-height: 30px;
+   vertical-align: middle;
+   width: 29px;
+}
+#wb_icon_notifications:hover i
+{
+   color: #333E4D;
+}
+#notifications
+{
+   background-color: transparent;
+   background-image: none;
+}
+#notifications_header
+{
+   background-color: #FFFFFF;
+   background-image: none;
+   border: 1px solid #DEE0E1;
+}
+#wb_notifications_header_title
+{
+   background-color: transparent;
+   background-image: none;
+   border: 0px solid transparent;
+   margin: 0;
+   padding: 0;
+   text-align: left;
+}
+#notifications_header_title
+{
+   color: #426799;
+   font-family: "MS Sans Serif";
+   font-weight: bold;
+   font-size: 15px;
+   margin: 0;
+   text-align: left;
+}
+#notifications_content
+{
+   background-color: #FFFFFF;
+   background-image: none;
+   border: 1px solid #DEE0E1;
+}
+#wb_notifications_content_title
+{
+   background-color: transparent;
+   background-image: none;
+   border: 0px solid transparent;
+   margin: 0;
+   padding: 0;
+   text-align: left;
+}
+#notifications_content_title
+{
+   color: #426799;
+   font-family: "MS Sans Serif";
+   font-weight: normal;
+   font-size: 15px;
+   margin: 0;
+   text-align: left;
+}
+#user_dropdown
+{
+   background-color: transparent;
+   background-image: none;
+}
+#user_dropdown_menu, #user_dropdown_menu .ui-menu-item a
+{
+   font-family: "MS Sans Serif";
+   font-weight: normal;
+   font-size: 13px;
+   text-decoration: none;
+}
+#user_dropdown_menu .ui-menu-item a
+{
+   color: #333333;
+}
+#user_dropdown_menu li
+{
+   list-style: none;
+   width: auto;
+}
+#user_dropdown_menu .ui-menu-item-wrapper
+{
+   line-height: 15px;
+   padding: 10px 15px 10px 46px;
+}
+#user_dropdown_menu li ul .ui-menu-item-wrapper
+{
+   width: 10px;
+}
+#wb_user_dropdown_menu .ui-widget-content
+{
+   border-color: rgba(222,224,225,1.00);
+   background-color: #FFFFFF;
+   background-image: none;
+   color: #333333;
+}
+#user_dropdown_menu .ui-state-active
+{
+   border-color: rgba(46,109,164,1.00);
+   background-color: #3370B7;
+   background-image: none;
+}
+#user_dropdown_menu .ui-state-active a
+{
+   color: #FFFFFF;
+}
+#user_dropdown_menu .ui-arrow
+{
+   background-image: none;
+   text-indent: 0;
+   display: inline-block;
+   font-family: "Material Icons";
+   font-style: normal;
+   font-weight: normal;
+   line-height: 1;
+}
+#user_dropdown_menu .ui-arrow:before
+{
+   content: "\";
+}
+#user_dropdown_menu i
+{
+   font-size: 16px;
+   position: absolute;
+   left: 15px;
+   top: 10px;
+   width: 16px;
+}

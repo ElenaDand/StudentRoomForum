@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {font-family: 'Nunito', sans-serif;;}
+* {box-sizing: border-box;}
+
+input[type=text], select, textarea {
+  width: 55%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: #585858;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #1f1f1f;
+}
+
+.container {
+  border-radius: 5px;
+  background-color: #f1f2f2;
+  padding: 20px;
+}
+</style>
+</head>
+<body>
+
+<h3>ΑΠΟΣΤΟΛΗ ΠΡΩΣΟΠΙΚΟΥ ΜΗΝΥΜΑΤΟΣ</h3>
+
+<br>
+
+<div class="container">
+  <form action="/action_page.php">
+    <label for="recipient_name">username παραλήπτη</label>
+    <br>
+    <input type="text" id="recipient_name" name="to_name" placeholder="Εισαγωγη username παραληπτη...">
+    <br>
+    <label for="message_subject">Θέμα</label>
+    <br>
+    <input type="text" id="message_subject" name="subject" placeholder="Βάλτε τιτλο...">
+    <br>
+    <br>
+    <label for="message_description">Μήνυμα</label>
+    <br>
+    <textarea id="message_description" name="message" placeholder="Γράψτε το μήνυμα σας...." style="height:200px"></textarea>
+    <br>
+    <input type="submit" value="ΑΠΟΣΤΟΛΗ">
+    <br>
+  </form>
+</div>
+
+</body>
+</html>

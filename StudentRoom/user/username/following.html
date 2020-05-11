@@ -1,0 +1,96 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>following</title>
+<meta name="generator" content="WYSIWYG Web Builder 15 Trial Version - http://www.wysiwygwebbuilder.com">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="base/jquery-ui.min.css" rel="stylesheet">
+<link href="StudentRoom.css" rel="stylesheet">
+<link href="following.css" rel="stylesheet">
+<script src="jquery-1.12.4.min.js"></script>
+<script src="jquery-ui.min.js"></script>
+<script src="wwb15.min.js"></script>
+<script>
+$(document).ready(function()
+{
+   $("#button_follow").button();
+   $("#button_unfollow").button();
+   $("#button_notifyme").button({ icon: 'ui-secondary', iconPosition: 'end' });
+   $("#button_not_notifyme").button({ icon: 'ui-secondary', iconPosition: 'end' });
+   $("#button_sendmsg").button();
+});
+</script>
+</head>
+<body>
+<a href="http://www.wysiwygwebbuilder.com" target="_blank"><img src="images/builtwithwwb15.png" alt="WYSIWYG Web Builder" style="position:absolute;left:441px;top:967px;margin: 0;border-width:0;z-index:250"></a>
+<div id="wb_main">
+<div id="main" style="height:auto;">
+<div id="uni_profile_layer" style="left:133px;top:10px;width:702px;height:412px;z-index:21;border-radius: 4px;">
+<div id="wb_ioannina_icon" style="display:inline-block;width:126px;z-index:13;">
+<img src="images/img_avatar.png" id="ioannina_icon" alt="">
+</div>
+<div id="wb_">
+<span style="color:#000000;font-family:Candara;font-size:19px;"><strong><a href="./profile.html" class="black_link">Ονομα Χρηστη</a></strong></span>
+</div>
+<div id="page_buttons_layer" style="left:9px;top:162px;width:676px;height:98px;z-index:15;">
+<button type="submit" id="button_sendmsg" name="sendmessage" value="Μήνυμα" style="display:block;width:135px;height:33px;z-index:0;">Μήνυμα</button>
+<button type="submit" id="button_follow" onclick="ShowObjectWithEffect('button_unfollow', 1, '', 0);ShowObjectWithEffect('button_follow', 0, '', 0);ShowObjectWithEffect('button_notifyme', 1, '', 0);return false;" name="follow" value="Ακολουθήστε" style="display:block;width:289px;height:33px;z-index:1;">Ακολουθήστε</button>
+<button type="submit" id="button_unfollow" onclick="ShowObjectWithEffect('button_follow', 1, '', 0);ShowObjectWithEffect('button_unfollow', 0, '', 0);ShowObjectWithEffect('button_notifyme', 0, '', 0);ShowObjectWithEffect('button_not_notifyme', 0, '', 0);return false;" name="unfollow" value="Ακολουθώ" style="display:none;width:289px;height:33px;z-index:2;">Ακολουθώ</button><script>
+$('#button_unfollow').hover(
+    function() {
+        var $this = $(this); // caching $(this)
+        $this.data('defaultText', $this.text());
+        $this.text("Να μην ακολουθώ!");
+    },
+    function() {
+        var $this = $(this); // caching $(this)
+        $this.text($this.data('defaultText'));
+    }
+);
+</script>
+<button type="submit" id="button_notifyme" onclick="ShowObjectWithEffect('button_not_notifyme', 1, '', 0);ShowObjectWithEffect('button_notifyme', 0, '', 0);return false;" name="notifyme" value="Ειδοποίησέ με" style="display:none;width:135px;height:33px;z-index:3;">Ειδοποίησέ με</button>
+<button type="submit" id="button_not_notifyme" onclick="ShowObjectWithEffect('button_notifyme', 1, '', 0);ShowObjectWithEffect('button_not_notifyme', 0, '', 0);return false;" name="notifyme" value="Ειδοποίησέ με" style="display:none;width:135px;height:33px;z-index:4;">Ειδοποίησέ με</button>
+</div>
+<div id="wb_Text1">
+<span style="color:#000000;font-family:Arial;font-size:13px;">Περιγραφή</span>
+</div>
+<div id="section_button_layer">
+<div id="button_discussions" class="RollOverLayer" style="left:10px;top:3px;width:116px;height:34px;z-index:9;" onclick="window.location.href='./profile.html';return false;">
+<div id="wb_button_discussions_text">
+<span style="color:#000000;font-family:Calibri;font-size:15px;">Συζητήσεις</span>
+</div>
+</div>
+<div id="button_notes" class="RollOverLayer" style="left:126px;top:3px;width:116px;height:34px;z-index:10;" onclick="window.location.href='./notes.html';return false;">
+<div id="wb_button_notes_text">
+<span style="color:#000000;font-family:Calibri;font-size:15px;">Σημειωσεις</span>
+</div>
+</div>
+<div id="button_followers" class="RollOverLayer" style="left:242px;top:3px;width:116px;height:34px;z-index:11;" onclick="window.location.href='./followers.html';return false;">
+<div id="wb_button_followers_text">
+<span style="color:#000000;font-family:Calibri;font-size:15px;">Ακόλουθοι</span>
+</div>
+</div>
+<div id="button_following" class="RollOverLayerSelected" style="left:358px;top:3px;width:116px;height:34px;z-index:12;" onclick="window.location.href='./following.html';return false;">
+<div id="wb_button_following_text">
+<span style="color:#000000;font-family:Calibri;font-size:15px;">Ακόλουθοι</span>
+</div>
+</div>
+</div>
+</div>
+<div id="followers_container" style="left:133px;top:424px;width:704px;height:54px;z-index:22;z-index: -1;
+height:auto;">
+<div id="follower" style="left:0px;top:0px;width:271px;height:52px;z-index:20;border-radius: 4px;
+position:relative;">
+<div id="wb_Image1" style="display:inline-block;width:42px;z-index:18;">
+<img src="images/img_avatar.png" id="Image1" alt="">
+</div>
+<div id="wb_Text2">
+<span style="color:#000000;font-family:Calibri;font-size:15px;">Ονομαχρηστη<br></span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>

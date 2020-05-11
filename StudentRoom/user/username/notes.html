@@ -1,0 +1,152 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>notes</title>
+<meta name="generator" content="WYSIWYG Web Builder 15 Trial Version - http://www.wysiwygwebbuilder.com">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="base/jquery-ui.min.css" rel="stylesheet">
+<link href="font-awesome.min.css" rel="stylesheet">
+<link href="StudentRoom.css" rel="stylesheet">
+<link href="notes.css" rel="stylesheet">
+<script src="jquery-1.12.4.min.js"></script>
+<script src="transition.min.js"></script>
+<script src="collapse.min.js"></script>
+<script src="dropdown.min.js"></script>
+<script src="jquery-ui.min.js"></script>
+<script src="wwb15.min.js"></script>
+<script>
+$(document).ready(function()
+{
+   $(document).on('click','.sorting_menu-navbar-collapse.in',function(e)
+   {
+      if ($(e.target).is('a') && ($(e.target).attr('class') != 'dropdown-toggle')) 
+      {
+         $(this).collapse('hide');
+      }
+   });
+   $("#button_sendmsg").button();
+   $("#button_follow").button();
+   $("#button_unfollow").button();
+   $("#button_notifyme").button({ icon: 'ui-secondary', iconPosition: 'end' });
+   $("#button_not_notifyme").button({ icon: 'ui-secondary', iconPosition: 'end' });
+});
+</script>
+</head>
+<body>
+<a href="http://www.wysiwygwebbuilder.com" target="_blank"><img src="images/builtwithwwb15.png" alt="WYSIWYG Web Builder" style="position:absolute;left:441px;top:967px;margin: 0;border-width:0;z-index:250"></a>
+<div id="wb_main">
+<div id="main" style="height:auto;">
+<div id="uni_profile_layer" style="left:133px;top:10px;width:702px;height:412px;z-index:28;border-radius: 4px;">
+<div id="wb_ioannina_icon" style="display:inline-block;width:126px;z-index:13;">
+<img src="images/img_avatar.png" id="ioannina_icon" alt="">
+</div>
+<div id="wb_">
+<span style="color:#000000;font-family:Candara;font-size:19px;"><strong><a href="./profile.html" class="black_link">Ονομα Χρηστη</a></strong></span>
+</div>
+<div id="page_buttons_layer" style="left:9px;top:162px;width:676px;height:98px;z-index:15;">
+<button type="submit" id="button_sendmsg" name="sendmessage" value="Μήνυμα" style="display:block;width:135px;height:33px;z-index:0;">Μήνυμα</button>
+<button type="submit" id="button_follow" onclick="ShowObjectWithEffect('button_unfollow', 1, '', 0);ShowObjectWithEffect('button_follow', 0, '', 0);ShowObjectWithEffect('button_notifyme', 1, '', 0);return false;" name="follow" value="Ακολουθήστε" style="display:block;width:289px;height:33px;z-index:1;">Ακολουθήστε</button>
+<button type="submit" id="button_unfollow" onclick="ShowObjectWithEffect('button_follow', 1, '', 0);ShowObjectWithEffect('button_unfollow', 0, '', 0);ShowObjectWithEffect('button_notifyme', 0, '', 0);ShowObjectWithEffect('button_not_notifyme', 0, '', 0);return false;" name="unfollow" value="Ακολουθώ" style="display:none;width:289px;height:33px;z-index:2;">Ακολουθώ</button><script>
+$('#button_unfollow').hover(
+    function() {
+        var $this = $(this); // caching $(this)
+        $this.data('defaultText', $this.text());
+        $this.text("Να μην ακολουθώ!");
+    },
+    function() {
+        var $this = $(this); // caching $(this)
+        $this.text($this.data('defaultText'));
+    }
+);
+</script>
+<button type="submit" id="button_notifyme" onclick="ShowObjectWithEffect('button_not_notifyme', 1, '', 0);ShowObjectWithEffect('button_notifyme', 0, '', 0);return false;" name="notifyme" value="Ειδοποίησέ με" style="display:none;width:135px;height:33px;z-index:3;">Ειδοποίησέ με</button>
+<button type="submit" id="button_not_notifyme" onclick="ShowObjectWithEffect('button_notifyme', 1, '', 0);ShowObjectWithEffect('button_not_notifyme', 0, '', 0);return false;" name="notifyme" value="Ειδοποίησέ με" style="display:none;width:135px;height:33px;z-index:4;">Ειδοποίησέ με</button>
+</div>
+<div id="wb_Text1">
+<span style="color:#000000;font-family:Arial;font-size:13px;">Περιγραφή</span>
+</div>
+<div id="section_button_layer">
+<div id="button_discussions" class="RollOverLayer" style="left:10px;top:3px;width:116px;height:34px;z-index:9;" onclick="window.location.href='./profile.html';return false;">
+<div id="wb_button_discussions_text">
+<span style="color:#000000;font-family:Calibri;font-size:15px;">Συζητήσεις</span>
+</div>
+</div>
+<div id="button_notes" class="RollOverLayerSelected" style="left:126px;top:3px;width:116px;height:34px;z-index:10;" onclick="window.location.href='./notes.html';return false;">
+<div id="wb_button_notes_text">
+<span style="color:#000000;font-family:Calibri;font-size:15px;">Σημειωσεις</span>
+</div>
+</div>
+<div id="button_followers" class="RollOverLayer" style="left:242px;top:3px;width:116px;height:34px;z-index:11;" onclick="window.location.href='./followers.html';return false;">
+<div id="wb_button_followers_text">
+<span style="color:#000000;font-family:Calibri;font-size:15px;">Ακόλουθοι</span>
+</div>
+</div>
+<div id="button_following" class="RollOverLayer" style="left:358px;top:3px;width:116px;height:34px;z-index:12;" onclick="window.location.href='./following.html';return false;">
+<div id="wb_button_following_text">
+<span style="color:#000000;font-family:Calibri;font-size:15px;">Ακόλουθοι</span>
+</div>
+</div>
+</div>
+</div>
+<div id="button_container" style="left:133px;top:424px;width:704px;height:60px;z-index:29;">
+<div id="wb_sorting_menu" style="display:inline-block;width:90px;height:48px;z-index:1018;">
+<div id="sorting_menu" class="sorting_menu" style="width:100%;height:auto !important;">
+<div class="container">
+<div class="navbar-header">
+<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sorting_menu-navbar-collapse">
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button>
+</div>
+<div class="sorting_menu-navbar-collapse collapse">
+<ul class="nav navbar-nav">
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown">Ταξινόμηση <b class="caret"></b></a>
+<ul class="dropdown-menu">
+<li><a href="">Νέα</a></li>
+<li><a href="">Χωρίς απαντήσεις</a></li>
+<li><a href="">Κορυφαία</a></li>
+<li><a href="">Περισσότερες απαντήσεις</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="post_container" style="left:133px;top:484px;width:704px;height:107px;z-index:30;z-index: -1;
+height:auto;">
+<div id="post" style="left:0px;top:0px;width:702px;height:90px;z-index:27;border-radius: 4px;
+position:relative;">
+<div id="wb_post_title" class="h3">
+<span style="color:#000000;font-family:Calibri;font-size:19px;"><strong><a href="./../../master_loggedin.aspx" class="black_link">Τιτλος</a></strong></span>
+</div>
+<div id="wb_post_description">
+<span style="color:#000000;font-family:Calibri;font-size:15px;"><a href="./../../master_loggedin.aspx" class="link_no_underline">Περιγραφη κειμενο</a></span>
+</div>
+<div id="post_info">
+<div id="wb_from_date">
+<span style="color:#000000;font-family:Calibri;font-size:15px;">Απο τον <a href="./../../master_loggedin.aspx" class="black_link">ονομαχρηστη</a>, ημερομηνια</span>
+</div>
+<div id="wb_icon_replies" style="display:inline-block;width:18px;height:20px;text-align:center;z-index:20;">
+<div id="icon_replies" style="cursor: context-menu;"><i class="fa fa-comments-o"></i></div>
+</div>
+<div id="wb_replies_number">
+<span style="color:#000000;font-family:Arial;font-size:13px;">0</span>
+</div>
+<div id="wb_post_upvote" style="display:inline-block;width:23px;height:20px;text-align:center;z-index:22;">
+<div id="post_upvote" style="cursor:pointer;"><i class="fa fa-arrow-circle-o-up"></i></div>
+</div>
+<div id="wb_post_downvote" style="display:inline-block;width:23px;height:20px;text-align:center;z-index:23;">
+<div id="post_downvote" style="cursor:pointer;"><i class="fa fa-arrow-circle-o-down"></i></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,94 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="master_loggedin.master.cs" Inherits="StudentRoom.master_loggedin" %>
+
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Page</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="base/jquery-ui.min.css" rel="stylesheet">
+<link href="StudentRoom.css" rel="stylesheet">
+<link href="master_loggedin.css" rel="stylesheet">
+<script src="jquery-1.12.4.min.js"></script>
+<script src="jquery-ui.min.js"></script>
+<script src="searchindex.js"></script>
+<script src="wb.sitesearch.min.js"></script>
+<script>
+function searchPage()
+{
+   var element = document.getElementById('search');
+   if (element.value.length != 0 || element.value != " ")
+   {
+      window.location.href = '?q='+encodeURIComponent(element.value);
+   }
+   return false;
+}
+</script>
+<script src="wwb15.min.js"></script>
+<script>
+$(document).ready(function()
+{
+   $("#user_dropdown_menu").menu(
+   {
+      icons: { submenu: 'ui-arrow' },
+      position: { my: 'right top', at: 'right bottom' }
+   });
+});
+</script>
+</head>
+<body>
+<div id="header" style="border-bottom:1px solid #C5C5C5;">
+<div id="header_title">
+<div id="wb_student_room_title" style="display:inline-block;width:187px;z-index:0;">
+<h2 id="student_room_title" style="cursor:pointer;"><a href="#" onclick="window.location.href='./index.aspx';return false;">Student Room</a></h2>
+</div>
+</div>
+<div id="header_buttons">
+<form name="search_form" id="search_form" role="search" accept-charset="UTF-8" style="display:inline" onsubmit="return searchPage()">
+<input type="text" id="search" style="display:block;width:183px;height:30px;margin-right: 10px;" name="SiteSearch1" value="" spellcheck="false" placeholder="&#913;&#957;&#945;&#950;&#942;&#964;&#951;&#963;&#951;" role="searchbox"></form>
+<div id="wb_icon_notifications" style="display:inline-block;width:39px;height:30px;text-align:center;z-index:2;">
+<a href="#" onclick="Toggle('notifications', 'blindvertical', 100);return false;"><div id="icon_notifications" style="cursor:pointer;"><i class="material-icons">&#xe7f4;</i></div></a>
+</div>
+<div id="wb_icon_messages" style="display:inline-block;width:38px;height:30px;text-align:center;z-index:3;">
+<div id="icon_messages" style="cursor:pointer;
+"><i class="material-icons">&#xe554;</i></div>
+</div>
+<div id="wb_icon_post" style="display:inline-block;width:42px;height:24px;text-align:center;z-index:4;">
+<div id="icon_post" style="cursor:pointer;"><i class="material-icons">&#xe22b;</i></div>
+</div>
+<div id="wb_icon_user" style="display:inline-block;width:32px;height:30px;text-align:center;z-index:5;">
+<a href="#" onclick="Toggle('user_dropdown', 'blindvertical', 100);return false;"><div id="icon_user" style="cursor:pointer;
+"><i class="material-icons">&#xe853;</i></div></a>
+</div>
+</div>
+</div>
+<div id="notifications" style="position:fixed;text-align:right;visibility:hidden;left:auto;right:145px;top:51px;width:294px;height:221px;z-index:23;">
+<div id="notifications_Container" style="width:294px;position:relative;margin-left:auto;margin-right:0;text-align:left;">
+<div id="notifications_header" style="position:absolute;text-align:left;left:0px;top:0px;width:292px;height:37px;z-index:16;">
+<div id="wb_notifications_header_title" style="position:absolute;left:20px;top:10px;width:136px;height:17px;z-index:14;">
+<h5 id="notifications_header_title">Eιδοποιήσεις</h5></div>
+</div>
+<div id="notifications_content" style="position:absolute;text-align:left;left:0px;top:39px;width:292px;height:180px;z-index:17;border-top-style:none;">
+<div id="wb_notifications_content_title" style="position:absolute;left:75px;top:83px;width:136px;height:17px;z-index:15;">
+<h5 id="notifications_content_title">Καμία Ειδοποίηση</h5></div>
+</div>
+</div>
+</div>
+<div id="user_dropdown" style="position:fixed;text-align:right;visibility:hidden;left:auto;right:20px;top:51px;width:11.3281%;height:12.9319%;z-index:24;">
+<div id="user_dropdown_Container" style="width:145px;position:relative;margin-left:auto;margin-right:0;text-align:left;">
+<div id="wb_user_dropdown_menu" style="position:absolute;left:0px;top:0px;width:145px;height:109px;z-index:1020;">
+<ul id="user_dropdown_menu">
+<li><div><a href="./user/username/profile.html" target="_self"><i class="material-icons">&#xe853;</i>&#928;&#961;&#959;&#966;&#943;&#955;</a></div></li>
+<li><div><a href="" target="_self"><i class="material-icons">&#xe8b8;</i>&#929;&#965;&#952;&#956;&#943;&#963;&#949;&#953;&#962;</a></div></li>
+<li><div><a href="" target="_self"><i class="material-icons">&#xe879;</i>&#913;&#960;&#959;&#963;&#973;&#957;&#948;&#949;&#963;&#951;</a></div></li>
+</ul>
+</div>
+</div>
+</div>
+<script>
+$(document).on('click', function (e) {
+        $("#notifications").hide();
+        $("#user_dropdown").hide();
+});
+</script></body>
+</html>
